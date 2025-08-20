@@ -1,76 +1,76 @@
-// const main = document.querySelectorAll(".main");
-// const nextBtn = document.querySelectorAll(".next_button");
-// const BackBtn = document.querySelectorAll(".back_button");
-// const num = document.querySelectorAll(".step-number");
-// const stepList = document.querySelectorAll(".progressive-bar li");
-// const message = document.getElementById("message");
-// const ball = document.querySelector(".toggle-ball");
-// const items = document.querySelectorAll(
-//   ".div-option-1, .add-ons_options-option, .general-container-hidden, .finshing-container"
-// );
+const main = document.querySelectorAll(".main");
+const nextBtn = document.querySelectorAll(".next_button");
+const BackBtn = document.querySelectorAll(".back_button");
+const num = document.querySelectorAll(".step-number");
+const stepList = document.querySelectorAll(".progressive-bar li");
+const message = document.getElementById("message");
+const ball = document.querySelector(".toggle-ball");
+const items = document.querySelectorAll(
+  ".div-option-1, .add-ons_options-option, .general-container-hidden, .finshing-container"
+);
 
-// ball.addEventListener("click", () => {
-//   items.forEach((item) => {
-//     item.classList.toggle("hidden");
-//   });
-//   ball.classList.toggle("active");
-// });
+ball.addEventListener("click", () => {
+  items.forEach((item) => {
+    item.classList.toggle("hidden");
+  });
+  ball.classList.toggle("active");
+});
 
-// let formNum = 0;
-// let passwordMatch = false;
-// nextBtn.forEach((next) => {
-//   next.addEventListener("click", (e) => {
-//     e.preventDefault();
-//     const currentForm = main[formNum].querySelectorAll("input");
-//     console.log(currentForm);
-//     currentForm.forEach((el) => {
-//       el.addEventListener("input", () => {
-//         el.style.borderColor = "green";
-//         message.textContent = "";
-//       });
-//       if (el.value === "" || !el.checkValidity()) {
-//         el.style.borderColor = "red";
-//         message.textContent = "Please fill out all the form appropriately";
-//         message.style.color = "red";
-//         next[formNum].disabled = true;
-//         return false;
-//       } else {
-//         el.style.borderColor = "green";
-//       }
-//     });
-//     formNum++;
-//     updateForm();
-//     progressForward();
-//     contentChange();
-//   });
-// });
+let formNum = 0;
+let passwordMatch = false;
+nextBtn.forEach((next) => {
+  next.addEventListener("click", (e) => {
+    e.preventDefault();
+    // const currentForm = main[formNum].querySelectorAll("input");
+    // console.log(currentForm);
+    // currentForm.forEach((el) => {
+    //   el.addEventListener("input", () => {
+    //     el.style.borderColor = "green";
+    //     message.textContent = "";
+    //   });
+    //   if (el.value === "" || !el.checkValidity()) {
+    //     el.style.borderColor = "red";
+    //     message.textContent = "Please fill out all the form appropriately";
+    //     message.style.color = "red";
+    //     next[formNum].disabled = true;
+    //     return false;
+    //   } else {
+    //     el.style.borderColor = "green";
+    //   }
+    // });
+    formNum++;
+    updateForm();
+    progressForward();
+    contentChange();
+  });
+});
 
-// BackBtn.forEach((next) => {
-//   next.addEventListener("click", () => {
-//     formNum--;
-//     updateForm();
-//     progressBackward();
-//     contentChange();
-//   });
-// });
+BackBtn.forEach((next) => {
+  next.addEventListener("click", () => {
+    formNum--;
+    updateForm();
+    progressBackward();
+    contentChange();
+  });
+});
 
-// function updateForm() {
-//   main.forEach((el) => {
-//     el.classList.remove("active");
-//   });
-//   main[formNum].classList.add("active");
-// }
+function updateForm() {
+  main.forEach((el) => {
+    el.classList.remove("active");
+  });
+  main[formNum].classList.add("active");
+}
 
-// function progressForward() {
-//   num.innerHTML = formNum + 1;
-//   stepList[formNum].classList.add("active");
-// }
+function progressForward() {
+  num.innerHTML = formNum + 1;
+  stepList[formNum].classList.add("active");
+}
 
-// function progressBackward() {
-//   let formValue = formNum + 1;
-//   stepList[formValue].classList.remove("active");
-//   num.innerHTML = formValue;
-// }
+function progressBackward() {
+  let formValue = formNum + 1;
+  stepList[formValue].classList.remove("active");
+  num.innerHTML = formValue;
+}
 
 // const content = document.querySelectorAll(".step-number-content");
 
