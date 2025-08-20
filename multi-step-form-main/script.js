@@ -17,7 +17,7 @@ ball.addEventListener("click", () => {
 });
 
 let formNum = 0;
-let passwordMatch = false;
+
 nextBtn.forEach((next) => {
   next.addEventListener("click", (e) => {
     e.preventDefault();
@@ -72,15 +72,15 @@ function progressBackward() {
   num.innerHTML = formValue;
 }
 
-// const content = document.querySelectorAll(".step-number-content");
+const content = document.querySelectorAll(".step-number-content");
 
-// function contentChange() {
-//   content.forEach((el) => {
-//     el.classList.remove("active");
-//     el.classList.add("d-none");
-//   });
-//   content[formNum].classList.add("active");
-// }
+function contentChange() {
+  content.forEach((el) => {
+    el.classList.remove("active");
+    el.classList.add("d-none");
+  });
+  content[formNum].classList.add("active");
+}
 
 // const divOption = document.querySelectorAll(".div-option-1");
 // divOption.forEach((el) => {
