@@ -1,0 +1,398 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <!-- displays site properly based on user's device -->
+
+    <link
+      rel="icon"
+      type="image/png"
+      sizes="32x32"
+      href="./assets/images/favicon-32x32.png"
+    />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/7.0.0/css/all.min.css"
+    />
+    <script defer src="./script.js"></script>
+    <link rel="stylesheet" href="./style.css" />
+
+    <title>Frontend Mentor | Multi-step form</title>
+  </head>
+  <body>
+    <div class="container">
+      <div class="card">
+        <div class="form">
+          <div class="left-side">
+            <div class="left-heading">
+              <h3>Progress form</h3>
+            </div>
+            <div class="steps-content">
+              <h3>Step <span class="step-number">1</span></h3>
+              <p class="step-number-content active">
+                Enter your personal information to get closer to companies
+              </p>
+              <p class="step-number-content d-none">
+                Get to know better by adding your diploma, certificate
+              </p>
+              <p class="step-number-content d-none">
+                Help companies get to know you better by telling them about you
+              </p>
+              <p class="step-number-content d-none">
+                Add your profile picture and let companies find you fast
+              </p>
+            </div>
+            <ul class="progressive-bar">
+              <li class="active">Your Info</li>
+              <li>Select Plan</li>
+              <li>Adds-On</li>
+              <li>Summary</li>
+            </ul>
+          </div>
+          <!-- right side element -->
+          <div class="right-side">
+            <!-- personal info -->
+            <form novalidate class="main active form-input">
+              <div class="text">
+                <h2>Personal Info</h2>
+                <p>
+                  pls provide your name, email address and your phone number
+                </p>
+              </div>
+              <div class="input-text">
+                <div class="input-div">
+                  <label for="name">Name</label>
+                  <br />
+                  <input
+                    type="text"
+                    name="name"
+                    id="name"
+                     minlength="3"
+                     maxlength="50"
+                    class="user_account"
+                    placeholder="e.g, adeniji peter"
+                   
+                  />
+                </div>
+
+              </div>
+              <div class="input-text">
+                <div class="input-div">
+                  <label for="email">Email</label>
+                  <br />
+                  <input
+                    type="email"
+                    name="email"
+                    id="email"
+                    class="user_account"
+                    placeholder="e.g, adenijipeter2018@gmail.com"
+                   
+                  />
+                </div>
+              </div>
+              <div class="input-text">
+                <div class="input-div">
+                  <label for="phone">Phone Number</label>
+                  <br />
+                  <input
+                    type="text"
+                    name="name"
+                    id="phone"
+                    class="user_account"
+                    placeholder="e.g, 555-555-5555"
+                   
+                    pattern="[0-9]{3}-[0-9]{3}-[0-9]{4}"
+                  />
+                </div>
+              </div>
+              <div class="buttons">
+                <button class="next_button">Next Step</button>
+              </div>
+                <div class="message-container">
+        <h3 id="message"></h3>
+      </div>
+            </form>
+            <!-- select plan -->
+            <div class="main ">
+              <div class="text">
+                <h2>Select your plan</h2>
+                <p>You have option of monthly or yealy billing</p>
+              </div>
+              <div class="div-option ">
+                <div class="div-option-1 click">
+                  <img src="./assets/images/icon-arcade.svg" alt="" />
+                  <div class="arcades-info">
+                    <h3>Arcade</h3>
+                    <div class="amount">
+                    
+                      $<span class="arcades-amount">9</span>/mon
+                      
+                    </div>
+                  </div>
+                </div>
+                <div class="div-option-1 click">
+                  <img src="./assets/images/icon-advanced.svg" alt="" />
+                  <div class="arcades-info">
+                    <h3>Advanced</h3>
+                    <div class="amount">
+                      $<span class="arcades-amount">12</span>/mon
+                    </div>
+                  </div>
+                </div>
+                <div class="div-option-1 click">
+                  <img src="./assets/images/icon-pro.svg" alt="" />
+                  <div class="arcades-info">
+                    <h3>Pro</h3>
+                    <div class="amount">
+                      $<span class="arcades-amount">15</span>/mon
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <!-- hidden -->
+              <div class="div-option">
+                   <div class="div-option-1 click hidden">
+                     <img src="./assets/images/icon-arcade.svg" alt="" />
+                     <div class="arcades-info">
+                       <h3>Arcade</h3>
+                       <div class="amount">
+                         $<span class="arcades-amount">90</span>/yr
+                       </div>
+                       <div class="period">2 months free</div>
+                     </div>
+                   </div>
+                   <div class="div-option-1 click hidden">
+                     <img src="./assets/images/icon-advanced.svg" alt="" />
+                     <div class="arcades-info">
+                       <h3>Advanced</h3>
+                       <div class="amount">
+                         $<span class="arcades-amount">120</span>/yr
+                       </div>
+                       <div class="period">2 months free</div>
+                     </div>
+                   </div>
+                   <div class="div-option-1 click hidden">
+                     <img src="./assets/images/icon-pro.svg" alt="" />
+                     <div class="arcades-info">
+                       <h3>Pro</h3>
+                       <div class="amount">
+                         $<span class="arcades-amount">150</span>/yr
+                       </div>
+                       <div class="period">2 months free</div>
+                     </div>
+                   </div>
+                 </div>
+                 <!-- btn -->
+              <div class="buttons button_space">
+                <button class="back_button">Back</button>
+                <button class="next_button">Next Step</button>
+              </div>
+
+              <!-- Toggle -->
+
+              <div class="payment-switch">
+                <div class="pay-day left">
+                  <h3>Monthly</h3>
+                </div>
+                <div class="toggle">
+                  <div class="toggle-ball"></div>
+                </div>
+                <div class="pay-day right">
+                  <h3>Yealy</h3>
+                </div>
+              </div>
+              </div>
+              <!-- Adds-On -->
+              <div class="main  ">
+                <div class="text">
+                  <h2>Pick add-ons</h2>
+                  <p>Add on help you gain your game experience</p>
+                </div>
+                <div class="add-ons_options">
+                  <div class="add-ons_options-option">
+                    <div class="option-conrtainer">
+                      
+                      <h2>
+                        <span><input type="checkbox" name="" class="check" /></span>
+                        Online service</h2>
+                        <h3>Access to multiplayer game</h3>
+                    </div>
+                    <div class="option-amount check">
+                      <div>+$ <span class="add-ons-amount">1</span>/mon</div>
+                    </div>
+                  </div>
+                  <div class="add-ons_options-option">
+                    <div class="option-conrtainer">
+                 
+                      <h2>
+                        <span>     <input type="checkbox" name="" id="" class="check" /></span>
+                        Large storage</h2>
+                      <h3>Extra 1T cloud save</h3>
+                    </div>
+                    <div class="option-amount check">
+                      <div>+$ <span class="add-ons-amount">2</span>/mon</div>
+                    </div>
+                  </div>
+                  <div class="add-ons_options-option">
+                    <div class="option-conrtainer">
+             
+                      <h2>
+                        <span>         <input type="checkbox" name="" id="" class="check"/></span>
+                        Customizable profile</h2>
+                      <h3>Custom them on your profile</h3>
+                    </div>
+                    <div class="option-amount check">
+                      <div>+$ <span class="add-ons-amount">2</span>/mon</div>
+                    </div>
+                  </div>
+                </div>
+                <!-- hidden -->
+                <div class="add-ons_options">
+                  <div class="add-ons_options-option hidden">
+                    <div class="option-conrtainer">
+                      
+                      <h2>
+                        <span><input type="checkbox" name="" class="check" /></span>
+                        Online service</h2>
+                        <h3>Access to multiplayer game</h3>
+                    </div>
+                    <div class="option-amount check">
+                      <div>+$ <span class="add-ons-amount">10</span>/yr</div>
+                    </div>
+                  </div>
+                  <div class="add-ons_options-option hidden">
+                    <div class="option-conrtainer">
+                 
+                      <h2>
+                        <span>     <input type="checkbox" name="" id="" class="check" /></span>
+                        Large storage</h2>
+                      <h3>Extra 1T cloud save</h3>
+                    </div>
+                    <div class="option-amount check">
+                      <div>+$ <span class="add-ons-amount">20</span>/yr</div>
+                    </div>
+                  </div>
+                  <div class="add-ons_options-option hidden">
+                    <div class="option-conrtainer">
+             
+                      <h2>
+                        <span>         <input type="checkbox" name="" id="" class="check"/></span>
+                        Customizable profile</h2>
+                      <h3>Custom them on your profile</h3>
+                    </div>
+                    <div class="option-amount check">
+                      <div>+$ <span class="add-ons-amount">20</span>/yr</div>
+                    </div>
+                  </div>
+                </div>
+                <div class="buttons button_space">
+                  <button class="back_button">Go Back</button>
+                  <button class="next_button">Next Step</button>
+                </div>
+                
+              </div>
+              <!-- summary -->
+                <div class="main ">
+                  <div class="text">
+                   <h2>Finishing Up</h2>
+                   <p>Double check everything looksm OK before confirming</p>
+                  </div>
+                  <div class="general-container">
+                    <div class="finshing-container">
+                      <div class="finishing">
+                        <h3 class="Finishing-arcade">Arcade (monthly)</h3>
+                        <a class="Finishing-arcade-link"  href="#">change</a>
+                      </div>
+                        <div class="option-amount target">
+                      <!-- <div>$<span class="add-ons-amount">9</span>/mon</div> -->
+                    </div>
+                    </div>
+                    <div class="finshing-container border">
+                      <div class="finishing-header ">
+                        <h3>Online service</h3>
+                      </div>
+                      <div class="option-amount targets  online">
+                        <!-- <div>+$<span class="add-ons-amount">1</span>/mon</div> -->
+                      </div>
+                    </div>
+                    <div class="finshing-container">
+                      <div class="finishing-header">
+                        <h3>Larger storage</h3>
+                      </div>
+                      <div class="option-amount  online">
+                        <div>+$<span class="add-ons-amount">2</span>/mon</div>
+                      </div>
+                    </div>
+                    <div class="finshing-container ">
+                       <div class="finishing-header">
+                         <h3>Total(per month)</h3>
+                       </div>
+                       <div class="option-amount online">
+                         <div>+$<span class="add-ons-amount">12</span>/mon</div>
+                       </div>  
+                     </div>
+                  </div>
+                    <!-- hidden -->
+                  <div class="general-container hidden">
+                    <div class="finshing-container hidden finisher ">
+                      <div class="finishing">
+                        <h3 class="Finishing-arcade">Arcade (year)</h3>
+                        <a class="Finishing-arcade-link"  href="#">change</a>
+                      </div>
+                        <div class="option-amount target">
+                      <!-- <div>$<span class="add-ons-amount">90</span>/yr</div> -->
+                    </div>
+                    </div>
+                    <div class="finshing-container hidden border finisher ">
+                      <div class="finishing-header ">
+                        <h3>Online service</h3>
+                      </div>
+                      <div class="option-amount  online">
+                        <div>+$<span class="add-ons-amount">10</span>/yr</div>
+                      </div>
+                    </div>
+                    <div class="finshing-container finisher  hidden">
+                      <div class="finishing-header">
+                        <h3>Larger storage</h3>
+                      </div>
+                      <div class="option-amount  online">
+                        <div>+$<span class="add-ons-amount">20</span>/yr</div>
+                      </div>
+                    </div>
+                    <div class="finshing-container  hidden">
+                       <div class="finishing-header">
+                         <h3>Total(per year)</h3>
+                       </div>
+                       <div class="option-amount  online">
+                         <div>$<span class="add-ons-amount ">120</span>/yr</div>
+                       </div>
+                     </div>
+                  </div>
+                  <div class="buttons button_space">
+                  <button class="back_button">Go Back</button>
+                  <button class="submit_button">Confirm</button>
+                </div>
+                </div>
+                <!-- thanks -->
+                <div class="main">
+                  <img src="./assets/images/icon-thank-you.svg" alt="" class="mark"/>
+                  <div class="congrats">
+                    <h2>Thank you!</h2>
+                  </div>
+                  <div class="thank-text">
+                    <p>
+                      Thank for confirming you subscription. We hope you have fun
+                      using our platform. If you ever need support, pls feel free to
+                      email us at support@petroux.com
+                    </p>
+                  </div>
+                </div>
+            </div>
+            
+          </div>
+        </div>
+      </div>
+    </div>
+  </body>
+</html>
