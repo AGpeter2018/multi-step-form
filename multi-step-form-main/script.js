@@ -82,41 +82,70 @@ function contentChange() {
   content[formNum].classList.add("active");
 }
 
-// const divOption = document.querySelectorAll(".div-option-1");
-// divOption.forEach((el) => {
-//   el.addEventListener("click", (e) => {
-//     const parent = e.target.closest(".click");
-//     if (!parent) return;
-//     // const amount = parent.querySelectorAll(".amount").textContent;
-//     const arcade = parent.querySelectorAll(".amount");
-//     arcade.forEach((el) => {
-//       console.log(el);
-//       const html = `
+const divOption = document.querySelectorAll(".div-option-1");
+divOption.forEach((el) => {
+  el.addEventListener("click", (e) => {
+    const parent = e.target.closest(".click");
+    if (!parent) return;
+    // const amount = parent.querySelectorAll(".amount").textContent;
+    const arcade = parent.querySelectorAll(".amount");
+    arcade.forEach((el) => {
+      console.log(el);
+      const html = `
 
-//                       <div><span class="add-ons-amount">${el.textContent}</span></div>
+                      <div><span class="add-ons-amount">${el.textContent}</span></div>
 
-//     `;
-//       document.querySelectorAll(".target").forEach((el) => {
-//         el.innerHTML = html;
-//       });
-//     });
-//   });
-// });
+    `;
+      document.querySelectorAll(".target").forEach((el) => {
+        el.innerHTML = html;
+      });
+    });
+  });
+});
 
-// const addOptions = document.querySelectorAll(".add-ons_options-option");
-// addOptions.forEach((el) => {
-//   el.addEventListener("click", (e) => {
-//     const parent = e.target.closest(".add-ons_options-option");
-//     console.log(parent);
-//     const siblings = parent.querySelectorAll(".check");
-//     siblings.forEach((el) => {
-//       console.log(el);
-//       const html = `
-//          <div><span class="add-ons-amount">${el.textContent}</span></div>
-//       `;
-//       document.querySelectorAll(".targets").forEach((el) => {
-//         el.innerHTML = html;
-//       });
-//     });
-//   });
-// });
+const addOptions = document.querySelectorAll(".add-ons_options-option");
+addOptions.forEach((el) => {
+  el.addEventListener("click", (e) => {
+    const parent = e.target.closest(".add-ons_options-option");
+    console.log(parent);
+    const siblingsHeaderA = parent.querySelectorAll(".text");
+    siblingsHeaderA.forEach((el, i) => {
+      console.log(el.textContent);
+      const html = `
+       <h3>${el.textContent}</h3>
+      `;
+      document.querySelectorAll(".first").forEach((el) => {
+        el.innerHTML = html;
+      });
+    });
+    const siblingsHeaderB = parent.querySelectorAll(".text1");
+    siblingsHeaderB.forEach((el) => {
+      const html = `
+       <h3>${el.textContent}</h3>
+      `;
+      document.querySelectorAll(".second").forEach((el) => {
+        el.innerHTML = html;
+      });
+    });
+    const siblings = parent.querySelectorAll(".check");
+    siblings.forEach((el) => {
+      console.log(el);
+      const html = `
+         <div><span class="add-ons-amount">${el.textContent}</span></div>
+      `;
+      document.querySelectorAll(".targets").forEach((el) => {
+        el.innerHTML = html;
+      });
+    });
+    const siblings1 = parent.querySelectorAll(".check1");
+    siblings1.forEach((el) => {
+      console.log(el);
+      const HTML = `
+         <div><span class="add-ons-amount">${el.textContent}</span></div>
+      `;
+      document.querySelectorAll(".target1").forEach((el) => {
+        el.innerHTML = HTML;
+      });
+    });
+  });
+});

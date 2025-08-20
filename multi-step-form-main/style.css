@@ -341,7 +341,8 @@ input[type="checkbox"] {
 }
 
 .finshing-container .option-amount,
-.targets {
+.targets,
+.target1 {
   padding-right: 0.75rem;
 }
 
