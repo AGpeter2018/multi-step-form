@@ -21,23 +21,23 @@ let passwordMatch = false;
 nextBtn.forEach((next) => {
   next.addEventListener("click", (e) => {
     e.preventDefault();
-    // const currentForm = main[formNum].querySelectorAll("input");
-    // console.log(currentForm);
-    // currentForm.forEach((el) => {
-    //   el.addEventListener("input", () => {
-    //     el.style.borderColor = "green";
-    //     message.textContent = "";
-    //   });
-    //   if (el.value === "" || !el.checkValidity()) {
-    //     el.style.borderColor = "red";
-    //     message.textContent = "Please fill out all the form appropriately";
-    //     message.style.color = "red";
-    //     next[formNum].disabled = true;
-    //     return false;
-    //   } else {
-    //     el.style.borderColor = "green";
-    //   }
-    // });
+    const currentForm = main[formNum].querySelectorAll("input");
+    console.log(currentForm);
+    currentForm.forEach((el) => {
+      el.addEventListener("input", () => {
+        el.style.borderColor = "green";
+        message.textContent = "";
+      });
+      if (el.value === "" || !el.checkValidity()) {
+        el.style.borderColor = "red";
+        message.textContent = "Please fill out all the form appropriately";
+        message.style.color = "red";
+        next[formNum].disabled = true;
+        return false;
+      } else {
+        el.style.borderColor = "green";
+      }
+    });
     formNum++;
     updateForm();
     progressForward();
