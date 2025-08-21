@@ -81,7 +81,7 @@ function contentChange() {
   });
   content[formNum].classList.add("active");
 }
-
+// adds-on selection border
 const optionBorder = document.querySelectorAll(".div-option-1");
 
 document.querySelector(".div-option").addEventListener("click", (e) => {
@@ -91,6 +91,15 @@ document.querySelector(".div-option").addEventListener("click", (e) => {
     el.classList.remove("active-color");
   });
   parent.classList.add("active-color");
+});
+const optionBlock = document.querySelectorAll(".add-ons_options-option");
+document.querySelector(".add-ons_options").addEventListener("click", (e) => {
+  const parent = e.target.closest(".option-click");
+  if (!parent) return;
+  optionBlock.forEach((el) => {
+    el.classList.remove("active-colors");
+  });
+  parent.classList.add("active-colors");
 });
 
 const divOption = document.querySelectorAll(".div-option-1");
