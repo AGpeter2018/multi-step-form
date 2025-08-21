@@ -82,6 +82,17 @@ function contentChange() {
   content[formNum].classList.add("active");
 }
 
+const optionBorder = document.querySelectorAll(".div-option-1");
+
+document.querySelector(".div-option").addEventListener("click", (e) => {
+  const parent = e.target.closest(".click");
+  if (!parent) return;
+  optionBorder.forEach((el) => {
+    el.classList.remove("active-color");
+  });
+  parent.classList.add("active-color");
+});
+
 const divOption = document.querySelectorAll(".div-option-1");
 divOption.forEach((el) => {
   el.addEventListener("click", (e) => {
