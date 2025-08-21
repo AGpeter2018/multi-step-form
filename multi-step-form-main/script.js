@@ -81,7 +81,7 @@ function contentChange() {
   });
   content[formNum].classList.add("active");
 }
-// adds-on selection border
+//  selection type border
 const optionBorder = document.querySelectorAll(".div-option-1");
 
 document.querySelector(".div-option").addEventListener("click", (e) => {
@@ -92,14 +92,50 @@ document.querySelector(".div-option").addEventListener("click", (e) => {
   });
   parent.classList.add("active-color");
 });
+
+// add on element border
+
+// document.querySelector(".add-ons_options").addEventListener("click", (e) => {
+//   const parent = e.target.closest(".option-click");
+//   if (!parent) return;
+//   optionBlock.forEach((el) => {
+//     el.classList.toggle("active-colors");
+//   });
+//   optionBlock[formNum].classList.toggle("active-colors");
+// });
+
 const optionBlock = document.querySelectorAll(".add-ons_options-option");
-document.querySelector(".add-ons_options").addEventListener("click", (e) => {
-  const parent = e.target.closest(".option-click");
-  if (!parent) return;
-  optionBlock.forEach((el) => {
-    el.classList.remove("active-colors");
+optionBlock.forEach((el) => {
+  el.addEventListener("click", () => {
+    el.classList.toggle("active-colors");
   });
-  parent.classList.add("active-colors");
+  optionBlock[formNum].classList.toggle("active-colors");
+});
+
+// checkbox validation
+
+const checkOnline = document.querySelectorAll(".checkonline");
+const checkLarge = document.querySelectorAll(".checklarge");
+// const checkProfile = document.querySelectorAll(".checkprofile");
+const btnNext = document.querySelector(".btn");
+
+btnNext.addEventListener("click", (e) => {
+  e.preventDefault();
+  //
+  // check if at least one from each group is checked
+  const onlineValid = Array.from(checkOnline).some((cb) => cb.checked);
+  const largeValid = Array.from(checkLarge).some((cb) => cb.checked);
+  // const profileValid = Array.from(checkProfile).some((cb) => cb.checked);
+
+  if (!(onlineValid && largeValid)) {
+    alert("❌ Not successful – please select required options.");
+  } else {
+    alert("✅ Successful");
+    formNum++;
+    updateForm();
+    progressForward();
+    contentChange();
+  }
 });
 
 const divOption = document.querySelectorAll(".div-option-1");
