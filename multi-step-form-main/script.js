@@ -342,3 +342,12 @@ backLink.forEach((el) => {
     num.innerHTML = formNum + 1;
   });
 });
+const congrat = document.querySelector(".thank");
+const submitBtn = document.querySelector(".submit_button");
+submitBtn.addEventListener("click", (e) => {
+  e.preventDefault();
+  main.forEach((el) => {
+    el.classList.remove("active");
+  });
+  congrat.classList.add("thank-visible");
+});
