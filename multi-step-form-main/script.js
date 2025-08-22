@@ -319,3 +319,26 @@ function add() {
   const yearlyTotalEl = document.querySelector(".append-sum2");
   if (yearlyTotalEl) yearlyTotalEl.textContent = yearlyTotal;
 }
+// Go to the plan selection page
+const backLink = document.querySelectorAll(".Finishing-arcade-link");
+backLink.forEach((el) => {
+  el.addEventListener("click", (e) => {
+    e.preventDefault();
+
+    formNum = 1;
+
+    updateForm();
+    contentChange();
+
+    // update progress bar
+    stepList.forEach((step, i) => {
+      if (i <= formNum) {
+        step.classList.add("active");
+      } else {
+        step.classList.remove("active");
+      }
+    });
+
+    num.innerHTML = formNum + 1;
+  });
+});
