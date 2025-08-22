@@ -127,7 +127,8 @@
 .progressive-bar li.active {
   color: white;
 }
-.d-none {
+.d-none,
+.thank-header {
   display: none;
 }
 

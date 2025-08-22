@@ -342,6 +342,7 @@ backLink.forEach((el) => {
     num.innerHTML = formNum + 1;
   });
 });
+const congratHeader = document.querySelector(".thank-header");
 const congrat = document.querySelector(".thank");
 const submitBtn = document.querySelector(".submit_button");
 submitBtn.addEventListener("click", (e) => {
@@ -350,4 +351,9 @@ submitBtn.addEventListener("click", (e) => {
     el.classList.remove("active");
   });
   congrat.classList.add("thank-visible");
+
+  content.forEach((el) => {
+    el.classList.remove("active");
+  });
+  congratHeader.classList.add("thank-visible");
 });
