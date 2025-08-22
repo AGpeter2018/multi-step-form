@@ -104,13 +104,13 @@ document.querySelector(".div-option").addEventListener("click", (e) => {
 //   optionBlock[formNum].classList.toggle("active-colors");
 // });
 
-const optionBlock = document.querySelectorAll(".add-ons_options-option");
-optionBlock.forEach((el) => {
-  el.addEventListener("click", () => {
-    el.classList.toggle("active-colors");
-  });
-  optionBlock[formNum].classList.toggle("active-colors");
-});
+// const optionBlock = document.querySelectorAll(".add-ons_options-option");
+// optionBlock.forEach((el) => {
+//   el.addEventListener("click", () => {
+//     el.classList.toggle("active-colors");
+//   });
+//   optionBlock[formNum].classList.toggle("active-colors");
+// });
 
 // checkbox validation
 
@@ -147,6 +147,8 @@ divOption.forEach((el) => {
       .querySelectorAll(".add-ons_options-option.active-colors")
       .forEach((addon) => {
         addon.classList.remove("active-colors");
+        const checkbox = addon.querySelector("input[type='checkbox']");
+        if (checkbox) checkbox.checked = false; // ✅ uncheck
       });
 
     // 2. Clear finishing page selections
@@ -183,12 +185,12 @@ divOption.forEach((el) => {
 const addOptions = document.querySelectorAll(".add-ons_options-option");
 addOptions.forEach((el) => {
   el.addEventListener("click", (e) => {
-    el.classList.toggle(".active-colors"); // select/deselect
+    el.classList.toggle("active-colors"); // select/deselect
     const parent = e.target.closest(".add-ons_options-option");
     console.log(parent);
 
     // If deselected → clear from finishing page
-    if (!el.classList.contains(".active-colors")) {
+    if (!el.classList.contains("active-colors")) {
       document
         .querySelectorAll(".first, .second, .third, .targets, .target1")
         .forEach((box) => {
