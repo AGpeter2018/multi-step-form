@@ -156,6 +156,10 @@
   margin-top: 20px;
 }
 
+.text h2 {
+  color: hsl(213, 96%, 18%);
+}
+
 .congrats {
   text-align: center;
 }
@@ -323,6 +327,7 @@ input[type="email"] {
 
 .add-ons_options {
   padding-top: 1rem;
+  position: relative;
 }
 
 .add-ons_options .hidden {
@@ -339,6 +344,25 @@ input[type="email"] {
   padding: 0.75rem 0;
   border: 1.5px solid hsl(229, 24%, 87%);
   border-radius: 5px;
+  /* position: relative; */
+}
+
+.checkonline {
+  position: absolute;
+  top: 4.7rem;
+  left: 0.2rem;
+}
+
+.checklarge {
+  position: absolute;
+  top: 9.5rem;
+  left: 0.2rem;
+}
+
+.checkprofile {
+  position: absolute;
+  top: 14.5rem;
+  left: 0.2rem;
 }
 
 .active-colors {
@@ -380,6 +404,7 @@ input[type="checkbox"] {
 } */
 
 .option-conrtainer h2 {
+  padding: 0 2rem;
   font-size: 0.75rem;
   color: hsl(213, 96%, 18%);
 }

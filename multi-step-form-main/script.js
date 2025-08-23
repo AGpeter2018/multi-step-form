@@ -95,15 +95,6 @@ document.querySelector(".div-option").addEventListener("click", (e) => {
 
 // add on element border
 
-// document.querySelector(".add-ons_options").addEventListener("click", (e) => {
-//   const parent = e.target.closest(".option-click");
-//   if (!parent) return;
-//   optionBlock.forEach((el) => {
-//     el.classList.toggle("active-colors");
-//   });
-//   optionBlock[formNum].classList.toggle("active-colors");
-// });
-
 // const optionBlock = document.querySelectorAll(".add-ons_options-option");
 // optionBlock.forEach((el) => {
 //   el.addEventListener("click", () => {
@@ -226,17 +217,6 @@ addOptions.forEach((el) => {
       });
     });
 
-    // const siblingsHeaderC = parent.querySelectorAll(".text2");
-    // siblingsHeaderC.forEach((el) => {
-    //   console.log(el);
-    //   const html = `
-    //    <h3>${el.textContent}</h3>
-    //   `;
-    //   document.querySelectorAll(".third").forEach((el) => {
-    //     el.innerHTML = html;
-    //   });
-    // });
-
     const siblings = parent.querySelectorAll(".check");
     siblings.forEach((el) => {
       console.log(el);
@@ -257,20 +237,11 @@ addOptions.forEach((el) => {
         el.innerHTML = HTML;
       });
     });
-    // const siblings2 = parent.querySelectorAll(".check2");
-    // siblings2.forEach((el) => {
-    //   const HTML = `
-    //      <div><span class="add-ons-amount block2">${el.textContent}</span></div>
-    //   `;
-    //   document.querySelectorAll(".target2").forEach((el) => {
-    //     el.innerHTML = HTML;
-    //   });
-    // });
+
     add();
   });
 });
 
-// helper: clean text → number
 // helper: clean text → number
 function toNumber(text) {
   if (!text) return 0;
@@ -356,4 +327,18 @@ submitBtn.addEventListener("click", (e) => {
     el.classList.remove("active");
   });
   congratHeader.classList.add("thank-visible");
+});
+
+const showtext = document.querySelector(".input-text");
+const userInput = showtext.querySelector("input[type='text']");
+const thanksText = document.querySelector(".thank-text p");
+
+userInput.addEventListener("input", (e) => {
+  const showName = userInput.value.trim();
+
+  function names(user) {
+    const html = `Thanks Mr/Mrs ${user} for confirming you subscription. We hope you have fun using our platform. If you ever need support, pls feel free to email us at support@petroux.com `;
+    thanksText.textContent = html;
+  }
+  names(showName);
 });
