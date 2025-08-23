@@ -533,7 +533,7 @@ input[type="checkbox"] {
     padding: 1rem -1;
   }
   .main {
-    padding: 0px 15px;
+    padding: 45px 15px;
   }
 
   .div-option .div-option-1 {
@@ -664,7 +664,7 @@ input[type="checkbox"] {
   .container .card .left-side {
     display: block;
     width: 100%;
-    height: auto;
+    height: 30rem;
     background: url("./assets/images/bg-sidebar-desktop.svg");
     padding: 0;
     border-radius: 0;
