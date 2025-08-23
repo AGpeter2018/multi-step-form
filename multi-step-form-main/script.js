@@ -119,13 +119,13 @@ function check() {
     const profileValid = Array.from(checkProfile).some((cb) => cb.checked);
 
     if (onlineValid || largeValid || profileValid) {
-      alert("✅ Successful");
+      // alert("✅ Successful");
       formNum++;
       updateForm();
       progressForward();
       contentChange();
     } else {
-      alert("❌ Not successful – please select required options.");
+      alert("❌ please select required options.");
     }
   });
 }

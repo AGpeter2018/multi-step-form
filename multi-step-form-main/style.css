@@ -325,7 +325,6 @@ input[type="email"] {
 }
 
 .add-ons_options {
-  padding-top: 1rem;
   position: relative;
 }
 
@@ -343,24 +342,24 @@ input[type="email"] {
   padding: 0.75rem 0;
   border: 1.5px solid hsl(229, 24%, 87%);
   border-radius: 5px;
-  /* position: relative; */
+  position: relative;
 }
 
 .checkonline {
   position: absolute;
-  top: 4.7rem;
+  top: 2.5rem;
   left: 0.2rem;
 }
 
 .checklarge {
   position: absolute;
-  top: 9.5rem;
+  top: 1.3rem;
   left: 0.2rem;
 }
 
 .checkprofile {
   position: absolute;
-  top: 14.5rem;
+  top: 1.3rem;
   left: 0.2rem;
 }
 
@@ -520,9 +519,12 @@ input[type="checkbox"] {
     height: 80vh !important ;
     margin: 30px;
   }
-  /* .container .card .right-side {
-    margin: 0 -4rem;
-  } */
+
+  .step-number-content,
+  .left-heading,
+  .steps-content h3 {
+    display: none;
+  }
 
   .container .card .left-side {
     display: none;
@@ -531,7 +533,7 @@ input[type="checkbox"] {
     padding: 1rem -1;
   }
   .main {
-    padding: 45px 15px;
+    padding: 0px 15px;
   }
 
   .div-option .div-option-1 {
@@ -581,21 +583,26 @@ input[type="checkbox"] {
     margin: 0.25rem -9rem;
   }
 
+  /* .add-ons_options {
+    padding-top: 1rem;
+    position: relative;
+  } */
+
   .checkonline {
     position: absolute;
-    top: 4rem;
-    left: 0.5rem;
+    top: 1.8rem;
+    left: 1rem;
   }
 
   .checklarge {
     position: absolute;
-    top: 9.5rem;
-    left: 0.5rem;
+    top: 1.8rem;
+    left: 1rem;
   }
 
   .checkprofile {
-    top: 15.5rem;
-    left: 0.5rem;
+    top: 1.8rem;
+    left: 1rem;
   }
 
   .general-container {
@@ -637,5 +644,66 @@ input[type="checkbox"] {
 
   input[type="email"] {
     width: 320px;
+  }
+
+  .container .card {
+    max-width: 350px;
+    height: auto;
+    margin: 15px auto;
+    position: relative;
+    display: flex;
+    flex-direction: column;
+  }
+
+  .container .card .form {
+    flex-direction: column;
+  }
+
+  /* Show progressive-bar at top */
+  .container .card .left-side {
+    display: block;
+    width: 100%;
+    height: auto;
+    background: url("./assets/images/bg-sidebar-desktop.svg");
+    padding: 0;
+    border-radius: 0;
+  }
+
+  .left-heading,
+  .steps-content {
+    display: none;
+  }
+
+  .progressive-bar {
+    display: flex;
+    justify-content: space-between;
+    margin: 1rem 0;
+    padding: 0 1rem;
+  }
+
+  .progressive-bar li {
+    margin: 0;
+    position: relative;
+    flex: 1;
+    text-align: center;
+    font-size: 12px;
+  }
+
+  .progressive-bar li::after {
+    display: none;
+  }
+
+  .progressive-bar li::before {
+    position: relative;
+    left: 0;
+    top: 0;
+    margin-bottom: 0.25rem;
+  }
+
+  /* Right-side fills under progress bar */
+  .container .card .right-side {
+    width: 100%;
+    border-radius: 0 0 20px 20px;
+    background: white;
   }
 }
