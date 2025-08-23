@@ -54,19 +54,11 @@
 }
 
 .message-container {
-  color: black;
   width: 90%;
   margin-top: 20px;
   display: flex;
   justify-content: center;
 }
-
-/* .user_account:valid {
-  border: 1px solid green;
-}
-.user_account:invalid {
-  border: 1px solid red;
-} */
 
 .progressive-bar {
   list-style: none;
@@ -226,6 +218,13 @@ input[type="email"] {
 .button_space button:nth-child(2) {
   position: absolute;
   left: 20rem;
+}
+.button_space button:nth-child(1):hover {
+  background-color: hsl(213, 96%, 18%);
+  color: white;
+}
+.button_space button:nth-child(2):hover {
+  background: hsl(228, 100%, 84%);
 }
 
 .div-option {
@@ -509,4 +508,134 @@ input[type="checkbox"] {
 
 .thank-visible {
   display: block;
+}
+
+@media (max-width: 750px) {
+  .container {
+    height: 100vh;
+    width: 100vw;
+  }
+  .container .card {
+    max-width: 350px;
+    height: 80vh !important ;
+    margin: 30px;
+  }
+  /* .container .card .right-side {
+    margin: 0 -4rem;
+  } */
+
+  .container .card .left-side {
+    display: none;
+  }
+  .div-option {
+    padding: 1rem -1;
+  }
+  .main {
+    padding: 45px 15px;
+  }
+
+  .div-option .div-option-1 {
+    width: 6rem;
+    height: 10rem;
+    padding-right: 2rem;
+    margin-right: 0.75rem;
+  }
+
+  .arcades-info {
+    padding-top: 3rem;
+    width: 5rem;
+    margin-right: 2rem;
+  }
+
+  .payment-switch {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin: 1rem 10rem;
+  }
+
+  .toggle {
+    background-color: hsl(213, 96%, 18%);
+    padding-right: 2.5rem;
+  }
+
+  .button_space button:nth-child(2) {
+    position: absolute;
+    left: 13rem;
+  }
+
+  .text h2,
+  p {
+    width: 15rem;
+  }
+
+  .add-ons_options-option {
+    padding: 0.8rem 10rem;
+  }
+
+  .option-conrtainer h2 {
+    margin: 0.25rem -9rem;
+  }
+
+  .option-conrtainer h3 {
+    margin: 0.25rem -9rem;
+  }
+
+  .checkonline {
+    position: absolute;
+    top: 4rem;
+    left: 0.5rem;
+  }
+
+  .checklarge {
+    position: absolute;
+    top: 9.5rem;
+    left: 0.5rem;
+  }
+
+  .checkprofile {
+    top: 15.5rem;
+    left: 0.5rem;
+  }
+
+  .general-container {
+    width: 20rem;
+  }
+
+  .mark {
+    display: block;
+    margin: 0.75rem 8rem;
+    width: 3rem;
+    height: 3rem;
+  }
+
+  .congrats {
+    margin: 0 6rem;
+    width: 8rem;
+    padding-bottom: 0.85rem;
+  }
+
+  .thank-text p {
+    padding-right: 5.6rem;
+  }
+
+  .message-container {
+    width: 210%;
+    padding-right: 100px;
+    margin-top: 20px;
+    font-size: 0.75rem;
+  }
+
+  .add-ons_options-option .option-amount,
+  .target {
+    padding-left: 5rem;
+  }
+
+  input[type="text"] {
+    width: 320px;
+  }
+
+  input[type="email"] {
+    width: 320px;
+  }
 }

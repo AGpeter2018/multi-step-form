@@ -30,7 +30,7 @@ nextBtn.forEach((next) => {
       });
       if (el.value === "" || !el.checkValidity()) {
         el.style.borderColor = "red";
-        message.textContent = "Please fill out all the form appropriately";
+        message.textContent = "Please fill out all the forms appropriately";
         message.style.color = "red";
         next[formNum].disabled = true;
         return false;
