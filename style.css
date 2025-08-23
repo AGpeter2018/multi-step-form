@@ -626,10 +626,11 @@ input[type="checkbox"] {
     padding-right: 5.6rem;
   }
 
-  .message-container {
+  .message-container h3 {
     width: 210%;
-    padding-right: 100px;
-    margin-top: 20px;
+    margin: 0 1rem;
+    padding-left: 1rem;
+    padding-bottom: 1rem;
     font-size: 0.75rem;
   }
 
